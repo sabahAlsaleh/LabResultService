@@ -18,5 +18,5 @@ jobs:
       with:
         push: true
         tags: ${{ secrets.DOCKER_TAG }}
-        # no-cache: true
+        no-cache: true
 
