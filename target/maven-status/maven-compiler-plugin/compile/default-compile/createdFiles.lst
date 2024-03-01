@@ -1,0 +1,8 @@
+kth\se\LabResultService\service\LabResultService.class
+kth\se\LabResultService\service\NotificationService.class
+kth\se\LabResultService\repository\EventStoreRepository.class
+kth\se\LabResultService\controller\LabResultController.class
+kth\se\LabResultService\config\EventStoreDBConfig.class
+kth\se\LabResultService\LabResultServiceApplication.class
+kth\se\LabResultService\model\LabResult.class
+kth\se\LabResultService\service\EventStoreService.class
