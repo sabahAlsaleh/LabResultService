@@ -117,6 +117,10 @@ Once LabResultService is up and running, you can interact with it using the foll
    https://localhost:8081/labresult/allevents
    ```
 
+## Patient Management Repository
+
+For the Patient Management functionality, please refer to the [PatientManagement](https://github.com/sabahAlsaleh/PatientManagement) repository. If you want to run the Patient Management project, Docker Compose needs to be executed here in the LabResultService project.
+
 
 ## Contributing
 
