@@ -113,9 +113,9 @@ Once LabResultService is up and running, you can interact with it using the foll
   ```
  - **Retrieve a Lab Result locally:**
   To get all lab results, use the following `GET` request:
-  ```
-  https://localhost:8081/labresult/allevents
-  ```
+   ```
+   https://localhost:8081/labresult/allevents
+   ```
 
 
 ## Contributing
