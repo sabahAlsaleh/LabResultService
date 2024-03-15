@@ -77,17 +77,6 @@ spring.kafka.producer.value-serializer=org.springframework.kafka.support.seriali
 
 Once LabResultService is up and running, you can interact with it using the following endpoints:
 
-- **Retrieve a Lab Result on cloud:**
-  To get all lab results, use the following `GET` request:
-  ```
-  https://labresult.app.cloud.cbh.kth.se/labresult/allevents
-  ```
- - **Retrieve a Lab Result locally:**
-  To get all lab results, use the following `GET` request:
-  ```
-  https://localhost:8082/labresult/allevents
-  ```
-
 - **Create a New Lab Result on cloud :**
   To add a new lab result, use the following `POST` request with the appropriate payload:
   ```
@@ -102,7 +91,16 @@ Once LabResultService is up and running, you can interact with it using the foll
       "result": "Positive"
   }
   ```
-
+- **Retrieve a Lab Result on cloud:**
+  To get all lab results, use the following `GET` request:
+  ```
+  https://labresult.app.cloud.cbh.kth.se/labresult/allevents
+  ```
+ - **Run a Lab Result locally:**
+     Run on the terminal
+    ```
+     docker-compose up -d
+     ```
 
 - **Create a New Lab Result Locally:**
   To add a new lab result, use the following `POST` request with the appropriate payload:
@@ -117,6 +115,11 @@ Once LabResultService is up and running, you can interact with it using the foll
       "patientId": "Sam",
       "result": "Positive"
   }
+  ```
+ - **Retrieve a Lab Result locally:**
+  To get all lab results, use the following `GET` request:
+  ```
+  https://localhost:8082/labresult/allevents
   ```
 
 
