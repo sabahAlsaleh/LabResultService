@@ -25,9 +25,8 @@ LabResultService is an event-based application designed to handle laboratory res
 To set up the LabResultService, you will need Java and Maven installed on your system. Follow these steps:
 
 1. Clone the repository.
-2. Navigate to the project directory.
+2. Navigate to the terminal.
 3. Run `./mvnw package` to build the project.
-4. Start the service with `java -jar target/LabResultService.jar`.
 
 ## Configuration
 
@@ -58,9 +57,9 @@ spring.kafka.producer.value-serializer=org.springframework.kafka.support.seriali
 For running locally with Docker Compose, adjust the following configurations:
 
 ```properties
-# Docker Compose configurations
-spring.kafka.bootstrap-servers=kafka:9092
-eventstoredb.connection-string=esdb://eventstoredb:2113?tls=false
+server.port:8081
+spring.kafka.bootstrap-servers=localhost:9092
+eventstoredb.connection-string=esdb://localhost:2113?tls=false
 
 # Common configurations
 eventstoredb.stream.name=LabResultStream
@@ -77,17 +76,6 @@ spring.kafka.producer.value-serializer=org.springframework.kafka.support.seriali
 
 Once LabResultService is up and running, you can interact with it using the following endpoints:
 
-- **Retrieve a Lab Result on cloud:**
-  To get all lab results, use the following `GET` request:
-  ```
-  https://labresult.app.cloud.cbh.kth.se/labresult/allevents
-  ```
- - **Retrieve a Lab Result locally:**
-  To get all lab results, use the following `GET` request:
-  ```
-  https://localhost:8082/labresult/allevents
-  ```
-
 - **Create a New Lab Result on cloud :**
   To add a new lab result, use the following `POST` request with the appropriate payload:
   ```
@@ -102,12 +90,17 @@ Once LabResultService is up and running, you can interact with it using the foll
       "result": "Positive"
   }
   ```
-
+- **Retrieve a Lab Result on cloud:**
+  To get all lab results, use the following `GET` request:
+  ```
+  https://labresult.app.cloud.cbh.kth.se/labresult/allevents
+  ```
+ - **Run a Lab Result locally:**
 
 - **Create a New Lab Result Locally:**
   To add a new lab result, use the following `POST` request with the appropriate payload:
   ```
-  http://localhost:8082/labresult/register
+  http://localhost:8081/labresult/register
   ```
    ```
   Content-Type: application/json
@@ -118,6 +111,11 @@ Once LabResultService is up and running, you can interact with it using the foll
       "result": "Positive"
   }
   ```
+ - **Retrieve a Lab Result locally:**
+  To get all lab results, use the following `GET` request:
+   ```
+   https://localhost:8081/labresult/allevents
+   ```
 
 
 ## Contributing
