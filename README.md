@@ -96,10 +96,6 @@ Once LabResultService is up and running, you can interact with it using the foll
   https://labresult.app.cloud.cbh.kth.se/labresult/allevents
   ```
  - **Run a Lab Result locally:**
-     Run on the terminal
-    ```
-     docker-compose up -d
-     ```
 
 - **Create a New Lab Result Locally:**
   To add a new lab result, use the following `POST` request with the appropriate payload:
