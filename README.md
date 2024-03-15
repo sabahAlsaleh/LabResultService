@@ -92,6 +92,8 @@ Once LabResultService is up and running, you can interact with it using the foll
   To add a new lab result, use the following `POST` request with the appropriate payload:
   ```
   http://labresult.app.cloud.cbh.kth.se/labresult/register
+  ```
+   ```
   Content-Type: application/json
 
   {
@@ -100,11 +102,14 @@ Once LabResultService is up and running, you can interact with it using the foll
       "result": "Positive"
   }
   ```
+
 
 - **Create a New Lab Result Locally:**
   To add a new lab result, use the following `POST` request with the appropriate payload:
   ```
   http://localhost:8082/labresult/register
+  ```
+   ```
   Content-Type: application/json
 
   {
@@ -113,6 +118,7 @@ Once LabResultService is up and running, you can interact with it using the foll
       "result": "Positive"
   }
   ```
+
 
 ## Contributing
 
