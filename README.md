@@ -25,7 +25,7 @@ LabResultService is an event-based application designed to handle laboratory res
 To set up the LabResultService, you will need Java and Maven installed on your system. Follow these steps:
 
 1. Clone the repository.
-2. Navigate to the project directory.
+2. Navigate to the terminal.
 3. Run `./mvnw package` to build the project.
 4. Start the service with `java -jar target/LabResultService.jar`.
 
